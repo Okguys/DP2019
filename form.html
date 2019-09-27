@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>회원가입</title> 
+        <link rel = "stylesheet" href=  "C:\Users\WWW\Documents\GitHub\DP2019\LoadCss.css">
+        <meta charset = "utf-8">
+        <a href="index.html">정보</a>      
+    </head>
+    <body>
+        <header>회원가입 페이지를 생성합니다.</header>
+        
+
+
+        <h1>회원가입</h1>
+        <form>
+            <label for = "id"><b>아이디</b></label> 
+            <br />
+            <input type = "id"> <br />
+
+            <label for = "password"><b>비밀번호</b></label> <br />
+            <input type = "password"> <br />
+            <label for = "password"><b>비밀번호를 재입력하세요.</b></label> <br />
+            <input type = "password"> <br />
+            <br />
+
+            <label for = "birth"><b>생년월일</b></label> <br />
+            <input id = "text" placeholder = "4자리 입력">
+
+            <select>
+                <option>월</option>
+                <option>1월</option>
+                <option>2월</option>
+                <option>3월</option>
+                <option>4월</option> 
+                <option>5월</option>
+                <option>6월</option>
+                <option>7월</option>
+                <option>8월</option> 
+                <option>9월</option>
+                <option>10월</option>
+                <option>11월</option>
+                <option>12월</option>
+            </select>
+            <input type = "text" placeholder = "일"> <br />
+            <br />
+
+            <br />
+            <label for = "gender"><b>성별</b></label> <br />
+            <select>
+                    <option>성별</option>
+                    <option>남성</option>
+                    <option>여성</option>
+                    <option>선택하지 않음</option>
+            </select>
+            <br />
+            <br />
+
+            <label for = "email"><b>본인 확인 이메일</b>(선택)</label> <br />
+            <input id = "text" placeholder = "이메일 앞자리 입력">
+            <select>
+                    <option>이메일 뒷자리</option>
+                    <option>naver.com</option>
+                    <option>daum.net</option>
+                    <option>gmail.com</option>
+                    <option>nate.com</option>
+            </select> 
+            <br />
+            <br />
+
+            <label for = "phonenum"><b>휴대전화 번호 입력</b></label> <br />
+            <input id = "text" placeholder = "-없이 입력">
+            
+
+            <br />
+            <p>약관에 동의하시겠습니까?</p>   
+            <input type = "checkbox"/> <br />
+            <br />
+
+            <input type = "submit" value = "회원가입하기"/> 
+
+        </form>
+    </body>
+</html>
