@@ -1,0 +1,18 @@
+#external_target{
+    color:red;
+}
+/* ID가 external_target이면 글자 색을 빨간색으로 만듬*/
+
+#target_Color{
+    text-align: center;  
+    color: orangered; 
+}
+
+#target_Center{
+    text-align: center;
+}
+
+#target_Footer{
+    text-align: center;
+    color: navy;
+}

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CSS</title>
+        <meta charset="UTF-8" />
+        <!-- external 외부에서 불러오기-->
+        <link rel="stylesheet" type="text/css" href="./defalut.css" />
+        <style>
+        #embeded_target{
+            color:green;
+        }
+        </style>
+    </head>
+    <body>
+        <div id="external_target">익스터널 방식_파일을 링크해서 참조함</div>
+        <div id="embeded_target">앰배디드 방식_파일이 떨어져있지 않지만 여러 페이지를 만들땐 불편</div>
+        <div style="color:fuchsia;">인라인 방식_1:1로 적용해야 하기 때문에 불편할 수 있음(비추천)</div>
+        <div style="color:blue;">인라인 방식2</div>
+        <!--html 전용 주석-->
+
+        <style>
+        /* 전체 선택자, 별 모양(*) */
+        *{
+
+        }
+        /* 요소(element) 선택자*/
+        b{ color: red; }
+        /* 클래스 선택자, **선언 시에만 클래스를 상징하는 마침표를 앞에 넣음*/
+        .c_name{ color:crimson;}
+        /* 아이디 선택자 , 샵 기호(#)*/
+        #i_name{color:coral;}
+        </style>        
+        <b>볼드체 글씨</b>
+        <div class="c_name">클래스 선택자</div>
+        <div id="i_name">아이디 선택자</div>
+
+        <style>
+            /* 가상 요소 선택자, 정보가 아닌 모양 취급(복붙이 불가능함) */
+            #virtual_target:before{
+                content: "*";
+            }
+            #virtual_target:after{
+                content: "*";
+            }
+            #virtual_target:first-letter{
+                font-size: 150px;
+            }
+            #virtual_target:first-line{
+                color:mediumvioletred;
+            }
+        </style>
+        <div id="virtual_target">가상 요소 선택자
+            가상 요소선택자 가상 요소선택자 가상 요소선택자 가상 요소선택자 가상 요소선택자 가상 요소선택자
+            가상 요소선택자 가상 요소선택자 가상 요소선택자 가상 요소선택자 가상 요소선택자 가상 요소선택자
+        </div>
+
+        <style>
+            .virtual_class:first-child{color:red;} /*첫 번째 child class에 적용*/
+            .virtual_class:last-child{color:sienna;} /*마지막 child class에 적용*/
+            .virtual_class:nth-child(3){color:green;} 
+            /* nth = n번째 child class nth-child(숫자)로 호출*/
+            /*:link, :visited, :hover, :active, :focus*/
+
+            a:link{color:red;}/* 기본 모습 */
+            a:visited{color:yellow;}/*링크가 방문 된 후일 때(눌려졌을 때)*/
+            a:hover{color:green;}/*마우스 올렸을 때*/
+            a:active{color:blue;}/*활성화*/
+            a:focus{color:blueviolet;}/*집중*/
+        </style>
+        <div> <!--부모 parents div -->    
+         <div class="virtual_class">가상 클래스 선택자</div> <!--자식 child div-->
+         <div class="virtual_class">가상 클래스 선택자2</div>
+         <div class="virtual_class">가상 클래스 선택자3</div>
+         <div class="virtual_class">가상 클래스 선택자4</div>
+        </div>
+
+        <a href="#">링크 버튼</a>
+
+        <style>
+            /* !!하위 선택자 - 띄어쓰기()*/
+            div li{color: seagreen;}
+            /* 자식 선택자 - 부등호(>)(직계 자식 객체인지 확인한다.) */
+            div>ul>li{text-decoration: underline;}
+            /* 선택자 조합(복수선택) - 쉼표(,)*/
+            div,ul,li{font-weight: bold;}        
+        </style>
+
+        <div>   
+         <ul>
+            <li>리스트1</li>
+            <li>리스트2</li>
+            <li>리스트3</li>
+            <li>리스트4</li>
+         </ul>
+        </div>
+
+    </body>
+</html>
