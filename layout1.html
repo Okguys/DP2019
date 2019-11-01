@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>레이아웃1</title>
+        <meta charset="utf-8"/>
+        <style>
+            header{
+                margin: 30px;
+            }
+            nav{
+                padding: 30px;
+            }
+            h1{
+                margin: 0px;
+            }
+            h2{
+                margin: 0px;
+            }
+            header>ul{
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+            #zoom{
+                margin: 12px;
+            }
+            header>ul>li{
+                float:left; /* float = 둥둥 떠다닌다 : 왼쪽기준 */
+                list-style:none;
+                padding-left:10px;
+                padding-right:10px;
+                border-right:solid 2px gray; /*오른쪽에 선을 하나 긋기*/
+            }
+            header>ul>li:nth-child(5){
+                border:none; /* 리스트 맨 마지막(5번째)의 border만 없어지게 */
+            }
+            .clear {clear: both; height: 0; overflow: hidden;} 
+            .float_left{float: left;}
+            .float_right{float: right;}
+
+            nav{
+                background-color: gray;
+            }
+            nav>ul>li{
+                float: left;
+                list-style: none;
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+            .container:nth-child(1){background-color: #98f;}
+            .container:nth-child(2){background-color: #5d9;}
+            .container:nth-child(3){background-color: #f76;}
+            .container:nth-child(4){background-color: #ec5;}
+            .container{
+                padding: 30px;
+            }
+            .content_part{
+                float: left; /*왼쪽으로 둥둥 떠다니게*/
+                width: 480px; 
+                margin: 10px;
+            }
+            .container>section{
+                /*margin-left: 100px;*/
+                width: 1000px;
+                margin-left: auto; /*바깥여백-왼쪽: 자동*/
+                margin-right: auto;
+            }
+            .container>section>h3{
+                color: white;
+            }
+            .container dt{
+                font-weight: bold;
+                margin-top: 25px;
+                margin-right: 25px;
+                margin-left: 25px;
+                margin-bottom: 25px;
+                margin: 25px; /*네 방향 모두*/
+                margin: 25px 0px; /*상하, 좌우*/
+                margin: 25px 0px 25px 0px;/*시계방향으로 상우하좌*/
+            }
+            .container dd{
+                margin: 25px 0px; /*바깥여백 없음*/
+            }
+            footer li{
+                float: left;
+                list-style: none;
+                padding: 0px 10px; /*상하 좌우*/
+            }
+            footer ul{
+                padding: 0px; /*왼쪽에 딱 달라붙게*/
+            }
+            footer{
+                background-color: #999;
+                padding: 30px;
+            }
+            #wrap{ /*body를 하나로 묶어 컨트롤함*/
+                /*width: 1100px; 고정값*/
+                min-width: 1024px; /*미니멈(최소) 너비 , 화면 크기가 작아져도 모양이 망가지지 않게 만들어줌*/
+                max-width: 1920px; /*최대 너비*/
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div id = "wrap">
+            <header>
+                <h1 class="float_left">
+                    <img src="images/layout1_head_logo.jpg" />
+                </h1>
+                <ul class="float_left">
+                    <li>ABOUT</li>
+                    <li>SERVICES</li>
+                    <li>WORKS</li>
+                    <li>BLOG</li>
+                    <li>CONTACT US</li>
+                    <div class="clear"></div>
+                </ul>
+                <div id="zoom" class="float_right">
+                    <img src="images/layout1_head_zoom.jpg" />
+                </div>
+                <div class="clear"></div>
+               
+            </header> <!--header, nav 등 구획 나누기 전용 태그(div말고 이거로 꼭 써야한다!)-->
+            <nav>
+                <h2 class="float_left">
+                    See Our Works
+                </h2>
+                <ul class="float_right">
+                    <li>Web Design</li>
+                    <li>Icons</li>
+                    <li>Illustrations</li>
+                    <li>Misc</li>
+                    <div class="clear"></div>
+                </ul>
+                <div class="clear"></div> <!--클리어 div를 리스트가 끝나는 부분과 내비가 끝나는 부분에 둘다 넣어야함-->
+                
+            </nav>
+            <div> <!--div로 컨테이너를 감싸야지 nth child가 제대로 인식됨-->
+                <div class="container">
+                    <section>
+                        <h3>Web Design</h3> <!--웬만하면 Depth를 지정해주는 것이 좋다-->
+                        <div class="content_part">
+                            <img src="images/layout1_img1.jpg" />
+                            <dl>
+                                <dt>dl 태그의 dt태그는 제목</dt>
+                                <dd>
+                                    dl태그의 dd는 내용
+                                </dd>
+                            </dl>
+                        </div>
+
+                        <div class="content_part">
+                                <img src="images/layout1_img1.jpg" />
+                                <dl>
+                                    <dt>dl 태그의 dt태그는 제목</dt>
+                                    <dd>
+                                        dl태그의 dd는 내용
+                                    </dd>
+                                </dl>
+                        </div>
+                        <div class="clear"></div>
+                    </section>
+                </div>    
+                <div class="container">
+                        <section>
+                            <h3>Web Design</h3> <!--웬만하면 Depth를 지정해주는 것이 좋다-->
+                            <div class="content_part">
+                                <img src="images/layout1_img1.jpg" />
+                                <dl>
+                                    <dt>dl 태그의 dt태그는 제목</dt>
+                                    <dd>
+                                        dl태그의 dd는 내용
+                                    </dd>
+                                </dl>
+                            </div>
+    
+                            <div class="content_part">
+                                    <img src="images/layout1_img1.jpg" />
+                                    <dl>
+                                        <dt>dl 태그의 dt태그는 제목</dt>
+                                        <dd>
+                                            dl태그의 dd는 내용
+                                        </dd>
+                                    </dl>
+                            </div>
+                            <div class="clear"></div>
+                        </section>    
+                </div>
+                <div class="container">
+                        <section>
+                            <h3>Web Design</h3> <!--웬만하면 Depth를 지정해주는 것이 좋다-->
+                            <div class="content_part">
+                                <img src="images/layout1_img1.jpg" />
+                                <dl>
+                                    <dt>dl 태그의 dt태그는 제목</dt>
+                                    <dd>
+                                        dl태그의 dd는 내용
+                                    </dd>
+                                </dl>
+                            </div>
+    
+                            <div class="content_part">
+                                    <img src="images/layout1_img1.jpg" />
+                                    <dl>
+                                        <dt>dl 태그의 dt태그는 제목</dt>
+                                        <dd>
+                                            dl태그의 dd는 내용
+                                        </dd>
+                                    </dl>
+                            </div>
+                            <div class="clear"></div>
+                        </section>    
+                </div> 
+                <div class="container">
+                    <section>
+                        <h3>Web Design</h3> <!--웬만하면 Depth를 지정해주는 것이 좋다-->
+                        <div class="content_part">
+                            <img src="images/layout1_img1.jpg" />
+                            <dl>
+                                <dt>dl 태그의 dt태그는 제목</dt>
+                                <dd>
+                                    dl태그의 dd는 내용
+                                </dd>
+                            </dl>
+                        </div>
+
+                        <div class="content_part">
+                                <img src="images/layout1_img1.jpg" />
+                                <dl>
+                                    <dt>dl 태그의 dt태그는 제목</dt>
+                                    <dd>
+                                        dl태그의 dd는 내용
+                                    </dd>
+                                </dl>
+                        </div>
+                        <div class="clear"></div>
+                    </section>    
+                </div>                                  
+                
+            </div>
+           <!-- <div>contents</div> --> 
+            <footer>
+                <div class="float_left">
+                    <ul>
+                        <li>Home</li>
+                        <li>About</li>
+                        <li>Services</li>
+                        <li>Work</li>
+                        <li>Blog</li>
+                        <li>Contact us</li>
+                        <div class="clear"></div>
+                    </ul>
+                    <div>ⓒ 2013 BlueBox. All Right Reserved.</div>
+                    <div>
+                        the loges in the design are the property of their respective owners/copyright holders.
+                    </div>
+                </div>
+                    <ul class="float_right">
+                        <li><img src="images/layout1_footer_icon1.png"></li>
+                        <li><img src="images/layout1_footer_icon2.png"></li>
+                        <li><img src="images/layout1_footer_icon3.png"></li>
+                        <li><img src="images/layout1_footer_icon4.png"></li>
+                        <li><img src="images/layout1_footer_icon5.png"></li>
+                        <li><img src="images/layout1_footer_icon6.png"></li>
+                        <div class="clear"></div>
+                    </ul>
+                    <div class="clear"></div>
+                </ul>
+            </footer>
+            <a href="index.html">돌아가기</a>
+        </div>
+    </body>
+</html>
